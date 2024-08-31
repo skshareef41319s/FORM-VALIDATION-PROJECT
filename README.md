@@ -1,1 +1,2 @@
 # FORM-VALIDATION-PROJECT
+This project demonstrates a frontend-only form validation system using HTML, CSS, and JavaScript. It features real-time input validation, custom error messages, and user-friendly feedback to enhance data accuracy and improve the overall user experience. The solution is designed to be cross-browser compatible and provides a seamless and interactive form validation experience.
