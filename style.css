@@ -1,0 +1,228 @@
+/* Body and Container Styles */
+body {
+    background: url('bgImage.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the background image covers the entire viewport */
+    font-family: "Nunito", sans-serif;
+    color: #ffffff; /* White Font Color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Glassy Effect Container */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slightly transparent border */
+}
+
+/* Highlighted Heading Style */
+h1 {
+    font-size: 45px;
+    color: #ffffff; /* White Color for Heading */
+    font-weight: 700; /* Bold Heading */
+    margin-bottom: 30px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Stronger shadow for better readability */
+    background: linear-gradient(135deg, #00796b, #ff7043); /* Gradient Background */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent for gradient effect */
+    border-bottom: 3px solid #ff7043; /* Bottom border for extra emphasis */
+    padding-bottom: 10px; /* Padding for spacing */
+    text-align: center; /* Center text alignment */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+h1:hover {
+    transform: scale(1.05); /* Slightly enlarge the header on hover */
+    color: #ffffff; /* Text color for hover state */
+}
+
+/* Form Input Styles */
+.form-control {
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 16px;
+    color: #ffffff; /* White Text */
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+}
+
+.form-control:focus {
+    border-color: #00796b; /* Teal Focus Border */
+    box-shadow: 0 0 5px rgba(0, 121, 107, 0.5);
+    background-color: rgba(0, 0, 0, 0.4); /* Darker semi-transparent background */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Input Group Styles */
+.input-group-prepend .input-group-text {
+    background-color: #00796b; /* Teal Background for Icons */
+    color: #ffffff; /* White Color for Icon */
+    border: none;
+    border-radius: 10px 0 0 10px; /* Rounded left corners */
+}
+
+.input-group-append .input-group-text {
+    background-color: #00796b; /* Teal Background for Toggle Icon */
+    color: #ffffff; /* White Color for Icon */
+    border: none;
+    border-radius: 0 10px 10px 0; /* Rounded right corners */
+}
+
+.input-icon .input-group-text i {
+    font-size: 18px;
+}
+
+/* Show/Hide Password Toggle Styles */
+.toggle-password {
+    cursor: pointer;
+}
+
+/* Password Strength Bar Styles */
+.progress {
+    height: 8px;
+}
+
+.progress-bar {
+    transition: width 0.3s ease;
+}
+
+.progress-bar.weak {
+    background-color: #d32f2f; /* Red */
+}
+
+.progress-bar.medium {
+    background-color: #ffa000; /* Yellow */
+}
+
+.progress-bar.strong {
+    background-color: #388e3c; /* Green */
+}
+
+/* Button Styles */
+.btn-custom {
+    background-color: #ff7043; /* Coral Color for Button */
+    color: #ffffff; /* White Text */
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 18px;
+}
+
+.btn-custom:hover {
+    background-color: #e64a19; /* Darker Coral on Hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Error Message Styles */
+.form-text.text-danger {
+    font-size: 0.85rem;
+    color: #d32f2f; /* Red for Error Messages */
+}
+
+/* Additional Styling */
+label {
+    font-weight: 600;
+    color: #00796b; /* Teal Color for Labels */
+    margin-bottom: 5px;
+    display: block;
+}
+
+::placeholder {
+    color: #dddddd; /* Light Gray Placeholder Text */
+    opacity: 1;
+}
+
+/* Centering the submit button with padding and spacing */
+.text-center {
+    margin-top: 30px;
+}
+
+/* Form Field Animations */
+
+/* Shake Animation for Errors */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+input.invalid {
+    animation: shake 0.3s;
+    border-color: #d32f2f; /* Red border for invalid input */
+}
+
+/* Responsive Design Enhancements */
+
+/* Mobile Devices */
+@media (max-width: 576px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .form-control {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .input-group-text i {
+        font-size: 16px;
+    }
+
+    .btn-custom {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+    h1 {
+        font-size: 38px;
+    }
+
+    .form-control {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .btn-custom {
+        padding: 11px 22px;
+        font-size: 17px;
+    }
+}
+
+/* Desktops */
+@media (min-width: 769px) {
+    .container {
+        padding: 30px;
+        margin: 50px auto;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .form-control {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .btn-custom {
+        padding: 12px 24px;
+        font-size: 18px;
+    }
+}

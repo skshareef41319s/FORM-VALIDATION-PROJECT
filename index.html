@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Registration Form</h1>
+        <form id="registrationForm">
+            <!-- Full Name Field -->
+            <div class="form-group input-icon">
+                <label for="fullName">Full Name</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+                    <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                </div>
+                <small class="form-text text-danger" id="nameError"></small>
+            </div>
+            
+            <!-- Email Field -->
+            <div class="form-group input-icon">
+                <label for="email">Email ID</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    </div>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <small class="form-text text-danger" id="emailError"></small>
+            </div>
+            
+            <!-- Phone Number Field -->
+            <div class="form-group input-icon">
+                <label for="phone">Phone Number</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                    </div>
+                    <input type="text" class="form-control" id="phone" placeholder="Enter your phone number">
+                </div>
+                <small class="form-text text-danger" id="phoneError"></small>
+            </div>
+            
+            <!-- Password Field -->
+            <div class="form-group input-icon">
+                <label for="password">Password</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    </div>
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                            <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+                        </span>
+                    </div>
+                </div>
+                <small class="form-text text-danger" id="passwordError"></small>
+                <!-- Password Strength Indicator -->
+                <div class="progress mt-2">
+                    <div id="strengthBar" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- Confirm Password Field -->
+            <div class="form-group input-icon">
+                <label for="confirmPassword">Confirm Password</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    </div>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                            <i class="fas fa-eye toggle-password" id="toggleConfirmPassword"></i>
+                        </span>
+                    </div>
+                </div>
+                <small class="form-text text-danger" id="confirmPasswordError"></small>
+            </div>
+            
+            <!-- Centered Submit Button -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-custom">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
